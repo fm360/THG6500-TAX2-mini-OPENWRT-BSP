@@ -2919,7 +2919,7 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	/* Quectel products using Quectel vendor ID */
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EC21, 0xff, 0xff, 0xff),
  	  .driver_info = NUMEP2 },
-@@ -1133,18 +1191,50 @@ static const struct usb_device_id option
+@@ -1133,18 +1193,52 @@ static const struct usb_device_id option
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EG95, 0xff, 0xff, 0xff),
  	  .driver_info = NUMEP2 },
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EG95, 0xff, 0, 0) },
@@ -2937,6 +2937,8 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EP06, 0xff, 0, 0) },
 +	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_RG255C_GL, 0xff, 0xff, 0xff),
 +	  .driver_info = RSVD(3) | NUMEP2 },
++ { USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_RG255C_GL, 0xff, 0xff, 0x30) },
++ { USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_RG255C_GL, 0xff, 0xff, 0x40) },
 +	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_RG255C_GL, 0xff, 0, 0) },
 +	{ USB_DEVICE_INTERFACE_CLASS(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EM05CN, 0xff),
 +	  .driver_info = RSVD(6) | ZLP },
@@ -2975,7 +2977,7 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EM12, 0xff, 0xff, 0xff),
  	  .driver_info = RSVD(1) | RSVD(2) | RSVD(3) | RSVD(4) | NUMEP2 },
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EM12, 0xff, 0, 0) },
-@@ -1156,6 +1243,13 @@ static const struct usb_device_id option
+@@ -1156,6 +1245,13 @@ static const struct usb_device_id option
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_RM500Q, 0xff, 0, 0) },
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_RM500Q, 0xff, 0xff, 0x10),
  	  .driver_info = ZLP },
@@ -2989,7 +2991,7 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EC200S_CN, 0xff, 0, 0) },
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_EC200T, 0xff, 0, 0) },
  	{ USB_DEVICE_AND_INTERFACE_INFO(QUECTEL_VENDOR_ID, QUECTEL_PRODUCT_RM500K, 0xff, 0x00, 0x00) },
-@@ -1211,6 +1305,7 @@ static const struct usb_device_id option
+@@ -1211,6 +1307,7 @@ static const struct usb_device_id option
  	 .driver_info = NCTRL(0) | RSVD(3) },
  	{ USB_DEVICE_INTERFACE_CLASS(TELIT_VENDOR_ID, 0x1033, 0xff),	/* Telit LE910C1-EUX (ECM) */
  	 .driver_info = NCTRL(0) },
@@ -2997,7 +2999,7 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	{ USB_DEVICE(TELIT_VENDOR_ID, TELIT_PRODUCT_LE922_USBCFG0),
  	  .driver_info = RSVD(0) | RSVD(1) | NCTRL(2) | RSVD(3) },
  	{ USB_DEVICE(TELIT_VENDOR_ID, TELIT_PRODUCT_LE922_USBCFG1),
-@@ -1257,6 +1352,14 @@ static const struct usb_device_id option
+@@ -1257,6 +1354,14 @@ static const struct usb_device_id option
  	  .driver_info = NCTRL(0) | RSVD(1) },
  	{ USB_DEVICE_INTERFACE_CLASS(TELIT_VENDOR_ID, 0x1075, 0xff),	/* Telit FN990 (PCIe) */
  	  .driver_info = RSVD(0) },
@@ -3012,7 +3014,7 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	{ USB_DEVICE(TELIT_VENDOR_ID, TELIT_PRODUCT_ME910),
  	  .driver_info = NCTRL(0) | RSVD(1) | RSVD(3) },
  	{ USB_DEVICE(TELIT_VENDOR_ID, TELIT_PRODUCT_ME910_DUAL_MODEM),
-@@ -1935,6 +2038,8 @@ static const struct usb_device_id option
+@@ -1935,6 +2040,8 @@ static const struct usb_device_id option
  	  .driver_info = RSVD(2) },
  	{ USB_DEVICE(AIRPLUS_VENDOR_ID, AIRPLUS_PRODUCT_MCD650) },
  	{ USB_DEVICE(TLAYTECH_VENDOR_ID, TLAYTECH_PRODUCT_TEU800) },
@@ -3021,7 +3023,7 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	{ USB_DEVICE(LONGCHEER_VENDOR_ID, FOUR_G_SYSTEMS_PRODUCT_W14),
  	  .driver_info = NCTRL(0) | NCTRL(1) },
  	{ USB_DEVICE(LONGCHEER_VENDOR_ID, FOUR_G_SYSTEMS_PRODUCT_W100),
-@@ -2000,8 +2105,12 @@ static const struct usb_device_id option
+@@ -2000,8 +2107,12 @@ static const struct usb_device_id option
  	  .driver_info = RSVD(0)},
  	{ USB_DEVICE_INTERFACE_CLASS(CINTERION_VENDOR_ID, CINTERION_PRODUCT_MV32_WA, 0xff),
  	  .driver_info = RSVD(3)},
@@ -3034,7 +3036,7 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	{ USB_DEVICE(OLIVETTI_VENDOR_ID, OLIVETTI_PRODUCT_OLICARD100),
  	  .driver_info = RSVD(4) },
  	{ USB_DEVICE(OLIVETTI_VENDOR_ID, OLIVETTI_PRODUCT_OLICARD120),
-@@ -2142,6 +2251,10 @@ static const struct usb_device_id option
+@@ -2142,6 +2253,10 @@ static const struct usb_device_id option
  	  .driver_info = RSVD(0) | RSVD(1) | RSVD(6) },
  	{ USB_DEVICE_INTERFACE_CLASS(0x0489, 0xe0db, 0xff),			/* Foxconn T99W265 MBIM */
  	  .driver_info = RSVD(3) },
@@ -3045,7 +3047,7 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	{ USB_DEVICE(0x1508, 0x1001),						/* Fibocom NL668 (IOT version) */
  	  .driver_info = RSVD(4) | RSVD(5) | RSVD(6) },
  	{ USB_DEVICE(0x1782, 0x4d10) },						/* Fibocom L610 (AT mode) */
-@@ -2154,6 +2267,7 @@ static const struct usb_device_id option
+@@ -2154,6 +2269,7 @@ static const struct usb_device_id option
  	{ USB_DEVICE_INTERFACE_CLASS(0x2cb7, 0x010a, 0xff) },			/* Fibocom MA510 (ECM mode) */
  	{ USB_DEVICE_AND_INTERFACE_INFO(0x2cb7, 0x010b, 0xff, 0xff, 0x30) },	/* Fibocom FG150 Diag */
  	{ USB_DEVICE_AND_INTERFACE_INFO(0x2cb7, 0x010b, 0xff, 0, 0) },		/* Fibocom FG150 AT */
@@ -3053,7 +3055,7 @@ diff -uprN a/drivers/usb/serial/option.c b/drivers/usb/serial/option.c
  	{ USB_DEVICE_INTERFACE_CLASS(0x2cb7, 0x01a0, 0xff) },			/* Fibocom NL668-AM/NL652-EU (laptop MBIM) */
  	{ USB_DEVICE_INTERFACE_CLASS(0x2cb7, 0x01a2, 0xff) },			/* Fibocom FM101-GL (laptop MBIM) */
  	{ USB_DEVICE_INTERFACE_CLASS(0x2cb7, 0x01a4, 0xff),			/* Fibocom FM101-GL (laptop MBIM) */
-@@ -2162,6 +2276,11 @@ static const struct usb_device_id option
+@@ -2162,6 +2278,11 @@ static const struct usb_device_id option
  	{ USB_DEVICE_INTERFACE_CLASS(0x305a, 0x1404, 0xff) },			/* GosunCn GM500 RNDIS */
  	{ USB_DEVICE_INTERFACE_CLASS(0x305a, 0x1405, 0xff) },			/* GosunCn GM500 MBIM */
  	{ USB_DEVICE_INTERFACE_CLASS(0x305a, 0x1406, 0xff) },			/* GosunCn GM500 ECM/NCM */
